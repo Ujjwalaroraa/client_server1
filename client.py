@@ -4,10 +4,10 @@ Spyder Editor
 
 This is a temporary script file.
 """
-#-------author@manik---------
+#----------------
 from socket import *
 host = ""
-port = 4444
+port = 1111
 server_s = socket(AF_INET, SOCK_STREAM)
 server_s.connect((host , port))
 
