@@ -1,5 +1,5 @@
 # client_server1
-Name: Manik Behl
+Name: Ujjwal Arora
 
 Student id :17311879
 
@@ -7,23 +7,25 @@ email id : arorau@tcd.ie
 
 Dependencies: Python 2.7
 
-Run the server start.sh [port number]
+This repository uses sockets to implement a multiclient server system based on TCP for interaction between the both, with stream connections used to provide a call-back capability from client to server. It contains two files Server (implementation of the chat server) and the Client file(implementation of the clients).
 
-This repository has the implementation of the centralised Multi-client chat server using Sockets in Python. Chat server is based on the Tcp protocol, designed for stream connections between clients and server, with stream connections used to provide a call-back capability from client to server. This repository contains two files stest (implementation of the chat server) and the client file(implementation of the clients)
+Multiple clients are handled by the sever by the process called mulit threading, It uses multiple threads to connect to multiple clients and with the help of their address, it assigns the ports to the clients and thus establishes the connections. It then adds the clients to the chat rooms. Then the server responds to the requests of the clients based on the connection and thus then responds to the chat requests.
 
-Server handles multiple clients using threads. Server connects with the client based on the address and assigns the port to client for transferring messages by including client to the chat room.
-Server has the additional feature of authority to add a client in a multiple chat rooms. Also, Server can add multiple clients to single room as well as multiple clients to single room or into multiple rooms.
-Server process the client request of client based on the connection and processes the chat request for joining the chat rooms based on the requests from the clients.
+Input and output streams are used in order the communicate with the client/clients by the server. When the connection and the chats are successful then it is server who helps the clients to exit the chat room so that more space is available for the other clients to join the chat room and thus communicate with the server.
 
-Server provides the functionalities of leaving the chat rooms as well.
-Server communicates with the single or with multiple client by transferring messages using the input and output streams.
-After successful communication server disconnects with the clients which were connected earlier.
-Working of server •	Socket - Create a new communication endpoint for a specific transport protocol. • Bind - Attach a local address to the newly created socket. •	Listen - Announce willingness to accept connections. • Accept-
+Working of server:
+1	Socket - Creating a new communication endpoint.
+2 Bind - Giving a local address to socket. 
+3	Listen - Indicating to accept connections. 
+4 Accept- Blocking the caller until a connection request arrives.
+5 Create- Creating a new socket. 
+6 Wait- Waiting for another connection request. 
+7 Close - Finishing the connection.
 
-Block caller until a connection request arrives.
-Create a new socket with the same properties as the original one and returns it to the caller.
-Wait for another connection request on the original socket • Close - Release the connection.
-Working of Client: •	Socket - Create a new communication endpoint for a specific transport protocol, but bind is not necessary •	Connect
-
-Actively attempt to establish a connection, with the transport- level address
-Block the caller until a connection has been set up successfully • Send - Send some data over the connection • Receive - Receive some data over the connection • Close - Release the connection
+Working of Client: 
+1	Socket - Create a new communication endpoint. 
+2	Connect - Actively attempt to establish a connection, with the transport- level address
+3 Block the caller until a connection has been set up successfully 
+4 Send - Send data over the connection 
+5 Receive - Receive data over the connection 
+6 Close - Finish the connection
