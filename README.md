@@ -14,18 +14,16 @@ Multiple clients are handled by the sever by the process called mulit threading,
 Input and output streams are used in order the communicate with the client/clients by the server. When the connection and the chats are successful then it is server who helps the clients to exit the chat room so that more space is available for the other clients to join the chat room and thus communicate with the server.
 
 Working of server:
-1	Socket - Creating a new communication endpoint.
-2 Bind - Giving a local address to socket. 
-3	Listen - Indicating to accept connections. 
-4 Accept- Blocking the caller until a connection request arrives.
-5 Create- Creating a new socket. 
-6 Wait- Waiting for another connection request. 
-7 Close - Finishing the connection.
+ Creating a new communication endpoint.
+ Giving a local address to socket. 
+ Indicating to accept connections. 
+ Blocking the caller until a connection request arrives.
+Creating a new socket. 
+Waiting for another connection request. Finishing the connection.
 
 Working of Client: 
-1	Socket - Create a new communication endpoint. 
-2	Connect - Actively attempt to establish a connection, with the transport- level address
-3 Block the caller until a connection has been set up successfully 
-4 Send - Send data over the connection 
-5 Receive - Receive data over the connection 
-6 Close - Finish the connection
+ Create a new communication endpoint. 
+ Actively attempt to establish a connection, with the transport- level address
+Block the caller until a connection has been set up successfully  Send data over the connection 
+Receive data over the connection 
+Finish the connection
